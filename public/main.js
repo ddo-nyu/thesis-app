@@ -70,6 +70,11 @@ function addAnimationTimeline() {
             });
         });
     });
+
+    Draggable.create('.photo', {
+        throwProps: true,
+    });
+
 }
 
 function animateMouseMovement() {
