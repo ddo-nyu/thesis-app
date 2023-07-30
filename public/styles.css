@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Schibsted+Grotesk:ital,wght@1,600&display=swap');
+
+@font-face {
+  font-family: 'Nomark';
+  src:  url('/assets/fonts/Nomark.otf') format('opentype');
+}
+
+:root {
+  --background-color: #EBE6E1;
+  --color: #111921;
+  --color2: #F2F0EC;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background: var(--color2);
+  color: var(--color);
+  cursor: crosshair;
+  overflow-x: hidden;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+  scroll-behavior: smooth;
+}
+
+.frame {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 20px;
+  border-radius: 30px;
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  background: var(--background-color);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: calc(100% - 2rem);
+  padding: 0 1rem;
+  margin: 1rem 0;
+  transform: translateY(250%);
+  opacity: 0;
+}
+
+header h1 {
+  font-weight: 200;
+  font-family: 'Schibsted Grotesk', sans-serif;
+  text-transform: uppercase;
+  /*letter-spacing: 0.3rem;*/
+  font-size: 9vw;
+  line-height: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+header h1 i {
+  margin-left: 0.1em;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.arrow {
+  /*filter: invert(1);*/
+  z-index: 100;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin: 3em;
+}

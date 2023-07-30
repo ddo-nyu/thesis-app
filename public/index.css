@@ -1,0 +1,26 @@
+:root {
+    --photo-width: 30vw;
+}
+
+.photo {
+    filter: contrast(98%) brightness(110%) saturate(110%);
+    position: absolute;
+    /*top: 0;*/
+    /*left: 0;*/
+    /*top: calc(50% - (var(--photo-width) / 2));*/
+    /*left: calc(50% - (var(--photo-width) / 2));*/
+    /*height: 30vh;*/
+    /*width: auto;*/
+    /*transform: translate(-50%, -50%);*/
+    transform-origin: center center;
+    width: var(--photo-width);
+}
+
+.photo:last-child {
+  z-index: 2;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+}
