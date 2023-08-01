@@ -19,12 +19,15 @@ async function main() {
 }
 
 function addAnimationTimeline() {
-    // gsap.registerPlugin(ScrollTrigger);
     const tl = gsap.timeline({});
     gsap.set('.photo', {
-        opacity: 0,
+        // opacity:1,
         x: (i, el) => (window.innerWidth / 2) - (el.clientWidth / 2),
-        y: (i, el) => (window.innerHeight / 2) - (el.clientHeight / 2),
+        y: (i, el) => {
+            const yPos = (window.innerHeight / 2) - (el.clientHeight / 2);
+            // console.log('el', el, ',', 'clientHeight', el.clientHeight);
+            return yPos;
+        },
     });
     tl.to('.header', {
         opacity: 1,
@@ -75,24 +78,6 @@ function addAnimationTimeline() {
         throwProps: true,
     });
 
-}
-
-function animateMouseMovement() {
-    let prevX = 0, prevY = 0;
-    window.addEventListener("mousemove", (e) => {
-        gsap.to('.photo', {
-            duration: 20,
-            overwrite: "auto",
-            // x: prevX <= e.clientX ? '+=50' : '-=50',
-            // y: prevY <= e.clientY ? '+=50' : '-=50',
-            x: e.screenX,
-            y: e.screenY,
-            // stagger: 0.3,
-            ease: "none"
-        });
-        prevX = e.clientX
-        prevY = e.clientY
-    });
 }
 
 function openFullscreen() {

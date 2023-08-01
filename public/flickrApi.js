@@ -14,7 +14,7 @@ async function fetchPhotos() {
             format: 'json',
             nojsoncallback: 1,
             per_page: photoCount,
-            tags: 'thesis',
+            min_upload_date: 1690862400,
         };
         let urlStr = '';
         Object.keys(params).forEach(key => {
